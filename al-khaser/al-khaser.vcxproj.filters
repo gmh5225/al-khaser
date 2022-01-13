@@ -501,7 +501,6 @@
     </MASM>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="..\README.md" />
     <None Include="..\CHANGELOG.md" />
   </ItemGroup>
