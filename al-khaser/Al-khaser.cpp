@@ -56,6 +56,8 @@ int main(void) {
       /* Debugger Detection */
       if (ENABLE_DEBUG_CHECKS) {
         print_category(TEXT("Debugger Detection"));
+		printf("Debugger Detection\n");
+
         exec_check(&IsDebuggerPresentAPI,
                    TEXT("Checking IsDebuggerPresent API "));
         exec_check(&IsDebuggerPresentPEB, TEXT("Checking PEB.BeingDebugged "));
@@ -391,7 +393,7 @@ int main(void) {
                    TEXT("Delaying execution using CreateWaitableTimer ..."));
         exec_check(timing_CreateTimerQueueTimer, delayInMillis,
                    TEXT("Delaying execution using CreateTimerQueueTimer ..."));
-
+	
         exec_check(&rdtsc_diff_locky, TEXT("Checking RDTSC Locky trick "));
         exec_check(&rdtsc_diff_vmexit,
                    TEXT("Checking RDTSC which force a VM Exit (cpuid) "));
