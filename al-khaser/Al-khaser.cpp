@@ -5,7 +5,7 @@
 #include "pch.h"
 #include <thread>
 
-int main(void) {
+int static_main(void) {
   /* enable functions */
   BOOL ENABLE_TLS_CHECKS = FALSE;
   BOOL ENABLE_DEBUG_CHECKS = TRUE;
