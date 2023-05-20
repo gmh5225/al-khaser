@@ -9,6 +9,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ATAIdentifyDump", "Tools\ATAIdentifyDump\ATAIdentifyDump.vcxproj", "{245D8670-A888-4ECC-9B51-80584E55B701}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WindowsProject1", "WindowsProject1\WindowsProject1.vcxproj", "{1B176E1D-A378-4F53-BD6C-3DBC4A32B7A1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{77AEFBC3-0ECE-46AD-A113-966AAAA838E1} = {77AEFBC3-0ECE-46AD-A113-966AAAA838E1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
