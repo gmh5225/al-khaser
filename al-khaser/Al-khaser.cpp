@@ -8,7 +8,7 @@
 int static_main(void) {
 	/* enable functions */
 	BOOL ENABLE_TLS_CHECKS = FALSE;
-	BOOL ENABLE_DEBUG_CHECKS = TRUE;
+	BOOL ENABLE_DEBUG_CHECKS = FALSE;
 	BOOL ENABLE_INJECTION_CHECKS = FALSE;
 	BOOL ENABLE_GEN_SANDBOX_CHECKS = FALSE;
 	BOOL ENABLE_VBOX_CHECKS = FALSE;
@@ -21,7 +21,7 @@ int static_main(void) {
 	BOOL ENABLE_PARALLELS_CHECKS = FALSE;
 	BOOL ENABLE_HYPERV_CHECKS = FALSE;
 	BOOL ENABLE_CODE_INJECTIONS = FALSE;
-	BOOL ENABLE_TIMING_ATTACKS = FALSE;
+	BOOL ENABLE_TIMING_ATTACKS = TRUE;
 	BOOL ENABLE_DUMPING_CHECK = FALSE;
 	BOOL ENABLE_ANALYSIS_TOOLS_CHECK = FALSE;
 	BOOL ENABLE_ANTI_DISASSM_CHECKS = FALSE;
@@ -379,22 +379,24 @@ int static_main(void) {
 			printf("\n[*] Delay value is set to %u minutes ...\n",
 				delayInSeconds / 60);
 
-			exec_check(timing_NtDelayexecution, delayInMillis,
+			/*exec_check(timing_NtDelayexecution, delayInMillis,
 				TEXT("Performing a sleep using NtDelayExecution ..."));
 			exec_check(timing_sleep_loop, delayInMillis,
-				TEXT("Performing a sleep() in a loop ..."));
-			exec_check(timing_SetTimer, delayInMillis,
-				TEXT("Delaying execution using SetTimer ..."));
+				TEXT("Performing a sleep() in a loop ..."));*/
+			/*exec_check(timing_SetTimer, delayInMillis,
+				TEXT("Delaying execution using SetTimer ..."));*/
 			exec_check(timing_timeSetEvent, delayInMillis,
 				TEXT("Delaying execution using timeSetEvent ..."));
-			exec_check(timing_WaitForSingleObject, delayInMillis,
-				TEXT("Delaying execution using WaitForSingleObject ..."));
-			exec_check(timing_IcmpSendEcho, delayInMillis,
-				TEXT("Delaying execution using IcmpSendEcho ..."));
-			exec_check(timing_CreateWaitableTimer, delayInMillis,
-				TEXT("Delaying execution using CreateWaitableTimer ..."));
-			exec_check(timing_CreateTimerQueueTimer, delayInMillis,
-				TEXT("Delaying execution using CreateTimerQueueTimer ..."));
+			/*exec_check(timing_WaitForSingleObject, delayInMillis,
+				TEXT("Delaying execution using WaitForSingleObject ..."));*/
+
+			/*exec_check(timing_IcmpSendEcho, delayInMillis,
+				TEXT("Delaying execution using IcmpSendEcho ..."));*/
+
+			/*exec_check(timing_CreateWaitableTimer, delayInMillis,
+				TEXT("Delaying execution using CreateWaitableTimer ..."));*/
+			//exec_check(timing_CreateTimerQueueTimer, delayInMillis,
+			//	TEXT("Delaying execution using CreateTimerQueueTimer ..."));
 
 			exec_check(&rdtsc_diff_locky, TEXT("Checking RDTSC Locky trick "));
 			exec_check(&rdtsc_diff_vmexit,
